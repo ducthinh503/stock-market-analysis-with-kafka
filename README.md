@@ -1,30 +1,51 @@
-# Stock Market Kafka Real Time Data Engineering Project
+# 📈 Stock Market Analysis with Kafka
 
-## Introduction 
-In this project, you will execute an End-To-End Data Engineering Project on Real-Time Stock Market Data using Kafka.
+## 📌 Overview
+This project demonstrates an **end-to-end real-time data engineering pipeline** for stock market data using **Apache Kafka** and **AWS cloud services**.
 
-We are going to use different technologies such as Python, Amazon Web Services (AWS), Apache Kafka, Glue, Athena, and SQL.
+The system simulates stock market data, streams it through Kafka, stores it in **Amazon S3**, catalogs metadata using **AWS Glue**, and enables analytical queries via **Amazon Athena**.
 
-## Architecture 
-<img src="docs/Architecture.jpg">
+The main focus of this project is **data ingestion, streaming, storage, and analytics**, rather than predictive modeling.
 
-## Technology Used
-- Programming Language - Python
-- Amazon Web Service (AWS)
-1. S3 (Simple Storage Service)
-2. Athena
-3. Glue Crawler
-4. Glue Catalog
-5. EC2
-- Apache Kafka
+---
 
+## 🏗️ Architecture
+<img src="docs/Architecture.jpg" alt="System Architecture" width="800"/>
 
-## Dataset Used
-You can use any dataset, we are mainly interested in operation side of Data Engineering (building data pipeline) 
+### Pipeline Flow
+1. Stock market data is simulated using Python.
+2. Data is published to Kafka topics via a Kafka producer.
+3. Kafka consumers process streaming data and store it in Amazon S3.
+4. AWS Glue Crawlers create metadata tables.
+5. Amazon Athena is used to query and analyze the data using SQL.
 
-Here is the dataset used in the video - https://github.com/darshilparmar/stock-market-kafka-data-engineering-project/blob/main/indexProcessed.csv
+---
 
+## 🛠️ Technology Stack
 
-## Complete Video Tutorial 
+### Programming Language
+- **Python**
 
-Video Link - https://www.youtube.com/embed/KerNf0NANMo
+### Streaming & Messaging
+- **Apache Kafka**
+
+### Cloud Platform (AWS)
+- **EC2** – Kafka deployment  
+- **Amazon S3** – Data storage  
+- **AWS Glue** – Data catalog & crawler  
+- **Amazon Athena** – SQL-based analytics  
+
+### Query Language
+- **SQL**
+
+---
+
+## 📂 Project Structure
+```bash
+stock-market-analysis-with-kafka/
+│
+├── data/           # Dataset used for simulation
+├── scripts/        # Kafka producer & consumer scripts
+├── docs/           # Architecture diagram and documentation
+├── README.md
+└── LICENSE
